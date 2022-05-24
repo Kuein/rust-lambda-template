@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: lambda-rust-template
+
+
+Resources:
+  RustTemplate:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bootstrap
+      Runtime: provided.al2
+      MemorySize: 512
+      CodeUri: .
+      FunctionUrlConfig:
+        AuthType: NONE
